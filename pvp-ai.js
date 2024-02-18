@@ -52,12 +52,10 @@ const winCombos = [
 
 const table = document.querySelector('table');
 const cells = document.querySelectorAll('.cell');
-//table.addEventListener('click', turnClick);
 document.querySelector('#scoreboard').style.visibility = 'Hidden';
 document.querySelector('#table').style.visibility = 'Hidden';
 document.querySelector('.returndiv').style.visibility = 'Hidden';
 
-//edited to basically be the same as startGame() function
 function btnreturn() {
 	origBoard = Array.from(Array(6 * 5).keys());
     player1Wins = 0;
@@ -198,7 +196,7 @@ function initGame() {
 
     if (isAIPlayer && currentPlayer === player2) {
       aiMove();
-      checkGameOver(); // Ensure checkGameOver is called after AI move
+      checkGameOver();
   } 
 }
 
