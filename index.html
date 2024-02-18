@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wild Glyph</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.cdnfonts.com/css/8bit-wonder" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <img src="music.png" id="musicButton" class="music-button" alt="Music Button">
+            <audio id="backgroundMusic" autoplay loop>
+            <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+        </div>
+    </nav>
+	
+	<div id="scoreboard"></div>
+
+	<table id="table">
+		<tr>
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+			<td class="cell" id="3"></td>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+			<td class="cell" id="8"></td>
+			<td class="cell" id="9"></td>
+			<td class="cell" id="10"></td>
+			<td class="cell" id="11"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="12"></td>
+			<td class="cell" id="13"></td>
+			<td class="cell" id="14"></td>
+			<td class="cell" id="15"></td>
+			<td class="cell" id="16"></td>
+			<td class="cell" id="17"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="18"></td>
+			<td class="cell" id="19"></td>
+			<td class="cell" id="20"></td>
+			<td class="cell" id="21"></td>
+			<td class="cell" id="22"></td>
+			<td class="cell" id="23"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="24"></td>
+			<td class="cell" id="25"></td>
+			<td class="cell" id="26"></td>
+			<td class="cell" id="27"></td>
+			<td class="cell" id="28"></td>
+			<td class="cell" id="29"></td>
+		</tr>
+	</table>
+	
+	<div class="startpage">
+        <div class="greet">Welcome to</div>
+		<div class="game__title">Wild Glyph</div>
+		<button id="startbtn" onClick="startGame()">Play</button>
+	</div>
+
+	
+	<div class="endgame">
+		<div class="text"></div><br>
+		<button class="playagnbtn" onClick="clearboard(); startGame();">Play again?</button>
+		
+	</div>
+
+	<div class="pickgamemode">
+		<div class="choose">Choose Your Oppoent</div><br>
+		<button id="AI">AI</button>&emsp;&emsp;
+		<button id="local">Human</button><br>
+		<button id="exgm">Return</button>
+	</div>
+
+	<div class="aimode">
+		<div class="ai__difficulty">Difficulty Level</div><br>
+		<button id="easy">Easy</button>&emsp;
+		<button id="difficult">Difficult</button>&emsp;
+		<button id="extreme">Extreme</button><br>
+		<button id="exaim">Return</button>
+	</div>
+
+	<div class="roundwin">
+		<div class="text1"></div><br>
+		<button id="continue" onClick="startGameRound();">Continue</button>
+	</div>
+	
+	<div class="returndiv">
+		<button id="return" onClick="btnreturn()">Return</button>
+	</div>
+
+  <footer>
+    <div>
+    <span>Carandang</span>
+    <span>Choa</span>
+    <span>Colaja</span>
+    <span>Fabregas</span>
+    <span>Farala</span>
+    </div>
+    
+  </footer>
+</body>
+
+<script src="pvp-ai.js"></script>
+
+<script>
+    const musicButton = document.getElementById('musicButton');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    // Play the background music automatically when the page loads
+    window.addEventListener('load', function() {
+        backgroundMusic.play();
+    });
+
+    musicButton.addEventListener('click', function() {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            musicButton.src = 'music.png';
+        } else {
+            backgroundMusic.pause();
+            musicButton.src = 'mute.png';
+        }
+    });
+</script> 
+</html>
