@@ -116,6 +116,12 @@
     </div>
     
   </footer>
+  <div class="credits">Button Sound Effect by  <a href="https://pixabay.com/users/irinairinafomicheva-25140203/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=13693">&nbsp;irinairinafomicheva&nbsp;</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=13693">&nbsp;Pixabay&nbsp;</a></div>
+
+  <audio id="buttonSound">
+	<source src="button_sound.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+  </audio>
 </body>
 
 <script src="pvp-ai.js"></script>
@@ -123,6 +129,7 @@
 <script>
     const musicButton = document.getElementById('musicButton');
     const backgroundMusic = document.getElementById('backgroundMusic');
+	const buttonSound = document.getElementById('buttonSound'); // Add this line
 
     // Play the background music automatically when the page loads
     window.addEventListener('load', function() {
@@ -138,5 +145,30 @@
             musicButton.src = 'mute.png';
         }
     });
+
+	 // Function to play the button sound
+	 function playButtonSound() {
+        buttonSound.play();
+    }
+
+    // Attach the playButtonSound function to the click events of the buttons
+    document.getElementById('startbtn').addEventListener('click', function () {
+        playButtonSound();
+        startGame();
+    });
+
+    document.getElementById('matchHistoryButton').addEventListener('click', playButtonSound);
+    document.querySelector('.playagnbtn').addEventListener('click', playButtonSound);
+    document.getElementById('exgm').addEventListener('click', playButtonSound);
+    document.getElementById('exaim').addEventListener('click', playButtonSound);
+    document.getElementById('continue').addEventListener('click', playButtonSound);
+    document.getElementById('return').addEventListener('click', playButtonSound);
+    document.getElementById('easy').addEventListener('click', playButtonSound);
+    document.getElementById('difficult').addEventListener('click', playButtonSound);
+    document.getElementById('extreme').addEventListener('click', playButtonSound);
+    document.getElementById('AI').addEventListener('click', playButtonSound);
+    document.getElementById('local').addEventListener('click', playButtonSound);
 </script> 
 </html>
+
+
