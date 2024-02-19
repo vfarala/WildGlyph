@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+/* BODY */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Bungee Spice', sans-serif;
+    background-color: rgb(59, 13, 13);
+}
+
+/* STYLE OF THE TABLE */
+.table {
+    margin-bottom: 310px;
+    width: 88%;
+}
+.table th,
+.table td {
+    text-align: center; 
+}
+
+#vsHumanButton:hover, #vsAIButton:hover {
+    background: linear-gradient(rgb(180, 180, 0), rgb(197, 128, 0), rgb(185, 49, 0), rgb(146, 0, 0));
+}
+
+.pagination .page-link {
+    color: white; /* Set the color of the pagination links */
+    background-color: rgb(49, 49, 49); /* Set the background color of the pagination links */
+    border-color: rgb(49, 49, 49); /* Set the border color of the pagination links */
+    margin-bottom: 6px;
+}
+
+.pagination .page-link:hover {
+    background-color: rgb(33, 33, 33); /* Set the background color of the pagination links on hover */
+    border-color: rgb(33, 33, 33); /* Set the border color of the pagination links on hover */
+}
+
+.return-button {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    
+}
+
+/* MUSIC */
+.music-button {
+    position: fixed;
+    top: 19px;
+    right: 55px;
+    width: 58px;
+    height: 58px;
+    cursor: pointer;
+    z-index: 999; /* Ensures the button stays on top */
+    transition: transform 0.3s ease-in-out;
+}
+
+.music-button:hover {
+		opacity: 0.7;/* Increases size on hover */
+}
+
+
+
