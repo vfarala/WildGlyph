@@ -54,6 +54,14 @@ button:hover, #exgm:hover, #exaim:hover, #return:hover {
     color: black;
 }
 
+.pickgamemode {
+      display: none;
+    }
+	
+.aimode {
+      display: none;
+    }
+	
 .returndiv {
     position: relative;
     top: 50%;
@@ -105,6 +113,7 @@ button:hover, #exgm:hover, #exaim:hover, #return:hover {
 
 .startpage .greet, .pickgamemode .choose, .aimode .ai__difficulty {
     font-size: 70px;
+	
 }
 
 .startpage .game__title {
