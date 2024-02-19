@@ -448,3 +448,11 @@ function turn(squareId, player) {
     let gameWon = checkWin(origBoard, player);
     if (gameWon) gameOver(gameWon);
 }
+
+const matchHistoryButton = document.getElementById('matchHistoryButton');
+
+        // Add an event listener for click event
+        matchHistoryButton.addEventListener('click', function() {
+            // Redirect to matchhistory.html
+            window.location.href = 'match_history.html';
+        });
